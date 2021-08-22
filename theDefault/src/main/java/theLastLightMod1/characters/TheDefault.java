@@ -83,17 +83,17 @@ public class TheDefault extends CustomPlayer {
     // =============== TEXTURES OF BIG ENERGY ORB ===============
 
     public static final String[] orbTextures = {
-            "theDefaultResources/images/char/defaultCharacter/orb/layer1.png",
-            "theDefaultResources/images/char/defaultCharacter/orb/layer2.png",
-            "theDefaultResources/images/char/defaultCharacter/orb/layer3.png",
-            "theDefaultResources/images/char/defaultCharacter/orb/layer4.png",
-            "theDefaultResources/images/char/defaultCharacter/orb/layer5.png",
-            "theDefaultResources/images/char/defaultCharacter/orb/layer6.png",
-            "theDefaultResources/images/char/defaultCharacter/orb/layer1d.png",
-            "theDefaultResources/images/char/defaultCharacter/orb/layer2d.png",
-            "theDefaultResources/images/char/defaultCharacter/orb/layer3d.png",
-            "theDefaultResources/images/char/defaultCharacter/orb/layer4d.png",
-            "theDefaultResources/images/char/defaultCharacter/orb/layer5d.png",};
+            "theLastLightMod1Resources/images/char/defaultCharacter/orb/layer1.png",
+            "theLastLightMod1Resources/images/char/defaultCharacter/orb/layer2.png",
+            "theLastLightMod1Resources/images/char/defaultCharacter/orb/layer3.png",
+            "theLastLightMod1Resources/images/char/defaultCharacter/orb/layer4.png",
+            "theLastLightMod1Resources/images/char/defaultCharacter/orb/layer5.png",
+            "theLastLightMod1Resources/images/char/defaultCharacter/orb/layer6.png",
+            "theLastLightMod1Resources/images/char/defaultCharacter/orb/layer1d.png",
+            "theLastLightMod1Resources/images/char/defaultCharacter/orb/layer2d.png",
+            "theLastLightMod1Resources/images/char/defaultCharacter/orb/layer3d.png",
+            "theLastLightMod1Resources/images/char/defaultCharacter/orb/layer4d.png",
+            "theLastLightMod1Resources/images/char/defaultCharacter/orb/layer5d.png",};
 
     // =============== /TEXTURES OF BIG ENERGY ORB/ ===============
 
@@ -101,9 +101,9 @@ public class TheDefault extends CustomPlayer {
 
     public TheDefault(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures,
-                "theDefaultResources/images/char/defaultCharacter/orb/vfx.png", null,
+                "theLastLightMod1Resources/images/char/defaultCharacter/orb/vfx.png", null,
                 new SpriterAnimation(
-                        "theDefaultResources/images/char/defaultCharacter/Spriter/theDefaultAnimation.scml"));
+                        "theLastLightMod1Resources/images/char/defaultCharacter/Spriter/theDefaultAnimation.scml"));
 
 
         // =============== TEXTURES, ENERGY, LOADOUT =================  
