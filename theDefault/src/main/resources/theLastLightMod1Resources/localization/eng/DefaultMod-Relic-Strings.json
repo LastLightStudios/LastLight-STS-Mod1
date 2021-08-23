@@ -30,5 +30,12 @@
       ".",
       "Select a card to bottle for "
     ]
+  },
+  "theLastLightMod1:BetterPotionBelt": {
+    "NAME": "Better Potion Belt",
+    "FLAVOR": "It's just Better 4Head",
+    "DESCRIPTIONS": [
+      "Upon pickup, gain #b2 Potion slots.""
+    ]
   }
 }

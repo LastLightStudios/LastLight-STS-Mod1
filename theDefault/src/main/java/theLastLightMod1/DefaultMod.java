@@ -24,6 +24,7 @@ import theLastLightMod1.cards.*;
 import theLastLightMod1.characters.TheDefault;
 import theLastLightMod1.events.IdentityCrisisEvent;
 import theLastLightMod1.potions.PlaceholderPotion;
+import theLastLightMod1.relics.BetterPotionBelt;
 import theLastLightMod1.relics.BottledPlaceholderRelic;
 import theLastLightMod1.relics.DefaultClickableRelic;
 import theLastLightMod1.relics.PlaceholderRelic;
@@ -395,6 +396,7 @@ public class DefaultMod implements
         BaseMod.addRelicToCustomPool(new PlaceholderRelic(), TheDefault.Enums.COLOR_GRAY);
         BaseMod.addRelicToCustomPool(new BottledPlaceholderRelic(), TheDefault.Enums.COLOR_GRAY);
         BaseMod.addRelicToCustomPool(new DefaultClickableRelic(), TheDefault.Enums.COLOR_GRAY);
+        BaseMod.addRelicToCustomPool(new BetterPotionBelt(), TheDefault.Enums.COLOR_GRAY);
         
         // This adds a relic to the Shared pool. Every character can find this relic.
         BaseMod.addRelic(new PlaceholderRelic2(), RelicType.SHARED);
