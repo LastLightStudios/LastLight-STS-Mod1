@@ -15,7 +15,7 @@ public class BetterPotionBelt extends CustomRelic{
     /*
      * https://github.com/daviscook477/BaseMod/wiki/Custom-Relics
      *
-     * Gain 2 Potion Slots.
+     * On pickup, gain 2 Potion Slots.
      */
 
     // ID, images, text.

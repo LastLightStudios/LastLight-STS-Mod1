@@ -37,5 +37,13 @@
     "DESCRIPTIONS": [
       "Upon pickup, gain #b2 Potion slots."
     ]
+  },
+  "theLastLightMod:FriendshipBracelet": {
+    "NAME": "Friendship Bracelet",
+    "FLAVOR": "Remember? We made these in fourth grade! See, mine is yellow and yours is blue!",
+    "DESCRIPTIONS": [
+      "At the start of each combat, gain #b",
+      " Friendship."
+    ]
   }
 }

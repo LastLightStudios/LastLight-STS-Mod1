@@ -23,10 +23,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import theLastLightMod.DefaultMod;
 import theLastLightMod.cards.*;
-import theLastLightMod.relics.BetterPotionBelt;
-import theLastLightMod.relics.DefaultClickableRelic;
-import theLastLightMod.relics.PlaceholderRelic;
-import theLastLightMod.relics.PlaceholderRelic2;
+import theLastLightMod.relics.*;
 
 import java.util.ArrayList;
 
@@ -183,6 +180,7 @@ public class TheDefault extends CustomPlayer {
         retVal.add(PlaceholderRelic.ID);
         retVal.add(PlaceholderRelic2.ID);
         retVal.add(DefaultClickableRelic.ID);
+        retVal.add(FriendshipBracelet.ID);
 
         // Mark relics as seen - makes it visible in the compendium immediately
         // If you don't have this it won't be visible in the compendium until you see them in game
