@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -15,6 +16,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theLastLightMod.DefaultMod;
 import theLastLightMod.util.TextureLoader;
+import theLastLightMod.Enums.CustomTags;
 
 import static theLastLightMod.DefaultMod.makePowerPath;
 
@@ -53,6 +55,7 @@ public class FriendshipPower extends AbstractPower {
         this.canGoNegative = true; //TODO undecided
     }
 
+    @Override
     public void stackPower(int stackAmount) {
         this.fontScale = 8.0F;
         this.amount += stackAmount;
@@ -64,6 +67,7 @@ public class FriendshipPower extends AbstractPower {
             this.amount = -999;
     }
 
+    @Override
     public void reducePower(int reduceAmount) {
         this.fontScale = 8.0F;
         this.amount -= reduceAmount;
@@ -75,6 +79,7 @@ public class FriendshipPower extends AbstractPower {
             this.amount = -999;
     }
 
+    @Override
     public void updateDescription() {
         if (this.amount > 0) {
             this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
@@ -84,5 +89,24 @@ public class FriendshipPower extends AbstractPower {
             this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
             this.type = AbstractPower.PowerType.DEBUFF;
         }
+    }
+
+    @Override
+    public float atDamageGive(float damage, DamageInfo.DamageType type, AbstractCard card){
+        if (type == DamageInfo.DamageType.NORMAL)
+        {
+            if (card.hasTag(CustomTags.FRIENDSHIP)){
+                return damage + this.amount;
+            }
+        }
+        return damage;
+    }
+
+    @Override
+    public float modifyBlock(float blockAmount, AbstractCard card){
+        if (card.hasTag(CustomTags.FRIENDSHIP)){
+            return blockAmount + this.amount;
+        }
+        return blockAmount;
     }
 }

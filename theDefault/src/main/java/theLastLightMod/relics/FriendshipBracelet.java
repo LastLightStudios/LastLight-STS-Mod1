@@ -5,6 +5,8 @@ import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import theLastLightMod.DefaultMod;
@@ -48,5 +50,4 @@ public class FriendshipBracelet extends CustomRelic{
     public String getUpdatedDescription() {
         return DESCRIPTIONS[0] + FRIENDSHIP_AMOUNT + DESCRIPTIONS[1];
     }
-
 }

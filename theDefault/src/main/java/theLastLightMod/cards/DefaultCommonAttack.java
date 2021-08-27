@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theLastLightMod.DefaultMod;
+import theLastLightMod.Enums.CustomTags;
 import theLastLightMod.characters.TheDefault;
 
 import static theLastLightMod.DefaultMod.makeCardPath;
@@ -89,6 +90,7 @@ public class DefaultCommonAttack extends CustomCard {
 
         this.tags.add(CardTags.STARTER_STRIKE); //Tag your strike, defend and form (Wraith form, Demon form, Echo form, etc.) cards so that they function correctly.
         this.tags.add(CardTags.STRIKE);
+        this.tags.add(CustomTags.FRIENDSHIP);
     }
 
     // Actions the card should do.

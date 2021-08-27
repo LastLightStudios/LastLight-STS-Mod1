@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theLastLightMod.DefaultMod;
 import theLastLightMod.characters.TheDefault;
+import theLastLightMod.Enums.CustomTags;
 
 import static theLastLightMod.DefaultMod.makeCardPath;
 
@@ -46,6 +47,7 @@ public class DefaultCommonSkill extends AbstractDynamicCard {
         baseBlock = BLOCK;
 
         this.tags.add(CardTags.STARTER_DEFEND); //Tag your strike, defend and form (Wraith form, Demon form, Echo form, etc.) cards so that they function correctly.
+        this.tags.add(CustomTags.FRIENDSHIP);
     }
 
     // Actions the card should do.
