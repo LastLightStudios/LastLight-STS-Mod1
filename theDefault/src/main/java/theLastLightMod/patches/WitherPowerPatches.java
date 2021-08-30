@@ -18,9 +18,8 @@ public class WitherPowerPatches {
     public static class WitherWeakInteraction{
         @SpireInsertPatch(locator = WeakLocator.class)
         public static SpireReturn<Void> WeakPatchMethod(WeakPower __instance){
-            for (AbstractPower p : __instance.owner.powers) {
-                if (p.ID.equals(WitherPower.POWER_ID))
-                    return SpireReturn.Return();
+            if (__instance.owner.hasPower(WitherPower.POWER_ID)){
+                return SpireReturn.Return();
             }
             return SpireReturn.Continue();
         }
@@ -38,9 +37,8 @@ public class WitherPowerPatches {
     public static class WitherVulnerableInteraction{
         @SpireInsertPatch(locator = VulnerableLocator.class)
         public static SpireReturn<Void> VulnerablePatchMethod(VulnerablePower __instance){
-            for (AbstractPower p : __instance.owner.powers) {
-                if (p.ID.equals(WitherPower.POWER_ID))
-                    return SpireReturn.Return();
+            if (__instance.owner.hasPower(WitherPower.POWER_ID)){
+                return SpireReturn.Return();
             }
             return SpireReturn.Continue();
         }
@@ -54,14 +52,24 @@ public class WitherPowerPatches {
         }
     }
 
+    @SpirePatch(clz = PoisonLoseHpAction.class, method = "update")
+    public static class WitherPoisonInteraction{
+        @SpireInsertPatch(locator = PoisonLocator.class, localvars = {"p"})
+        public static void PoisonPatchMethod(PoisonLoseHpAction __instance, AbstractPower p){
+            if (p.owner.hasPower(WitherPower.POWER_ID))
+            {
+                p.amount++;
+                return;
+            }
+            return;
+        }
 
-/*
-    private static class PoisonLocator extends SpireInsertLocator {
-        @Override
-        public int[] Locate(CtBehavior ctMethodToPatch) throws Exception {
-            Matcher finalMatcher = new Matcher.FieldAccessMatcher(PoisonLoseHpAction.class, "amount");
-            return LineFinder.findInOrder(ctMethodToPatch, finalMatcher);
+        private static class PoisonLocator extends SpireInsertLocator {
+            @Override
+            public int[] Locate(CtBehavior ctMethodToPatch) throws Exception {
+                Matcher finalMatcher = new Matcher.FieldAccessMatcher(AbstractPower.class, "amount");
+                return new int[] {LineFinder.findAllInOrder(ctMethodToPatch, finalMatcher)[1]};
+            }
         }
     }
- */
 }
