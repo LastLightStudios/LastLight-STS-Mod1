@@ -155,7 +155,7 @@ public class TheDefault extends CustomPlayer {
         logger.info("Begin loading starter Deck Strings");
 
         retVal.add(DefaultCommonAttack.ID);
-        retVal.add(DefaultUncommonAttack.ID);
+        // retVal.add(DefaultUncommonAttack.ID);
         retVal.add(DefaultRareAttack.ID);
 
         retVal.add(DefaultCommonSkill.ID);
@@ -163,12 +163,14 @@ public class TheDefault extends CustomPlayer {
         retVal.add(DefaultRareSkill.ID);
 
         retVal.add(DefaultCommonPower.ID);
-        retVal.add(DefaultUncommonPower.ID);
-        retVal.add(DefaultRarePower.ID);
+        // retVal.add(DefaultUncommonPower.ID);
+        // retVal.add(DefaultRarePower.ID);
 
-        retVal.add(DefaultAttackWithVariable.ID);
+        // retVal.add(DefaultAttackWithVariable.ID);
         retVal.add(DefaultSecondMagicNumberSkill.ID);
-        retVal.add(OrbSkill.ID);
+        // retVal.add(OrbSkill.ID);
+        retVal.add(PoisonStrike.ID);
+        retVal.add(WitheringStrike.ID);
         return retVal;
     }
 

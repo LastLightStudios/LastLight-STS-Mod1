@@ -21,7 +21,6 @@ import theLastLightMod.Enums.CustomTags;
 import static theLastLightMod.DefaultMod.makePowerPath;
 
 public class FriendshipPower extends AbstractPower {
-    public AbstractCreature source;
 
     public static final String POWER_ID = DefaultMod.makeID("FriendshipPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
@@ -33,7 +32,7 @@ public class FriendshipPower extends AbstractPower {
     private static final Texture tex84 = TextureLoader.getTexture(makePowerPath("placeholder_power84.png"));
     private static final Texture tex32 = TextureLoader.getTexture(makePowerPath("placeholder_power32.png"));
 
-    public FriendshipPower(final AbstractCreature owner, final int amount) {
+    public FriendshipPower(final AbstractCreature owner, int amount) {
         name = NAME;
         ID = POWER_ID;
 
@@ -44,14 +43,12 @@ public class FriendshipPower extends AbstractPower {
         if (this.amount <=-999)
             this.amount = -999;
 
-        type = PowerType.BUFF;
-        isTurnBased = false;
-
         // We load those textures here.
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
         this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
 
         updateDescription();
+        type = PowerType.BUFF;
         this.canGoNegative = true; //TODO undecided
     }
 
@@ -60,7 +57,7 @@ public class FriendshipPower extends AbstractPower {
         this.fontScale = 8.0F;
         this.amount += stackAmount;
         if (this.amount == 0)
-            addToTop((AbstractGameAction)new RemoveSpecificPowerAction(this.owner, this.owner, FriendshipPower.POWER_ID));
+            addToTop((AbstractGameAction)new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
         if (this.amount >= 999)
             this.amount = 999;
         if (this.amount <= -999)
@@ -72,7 +69,7 @@ public class FriendshipPower extends AbstractPower {
         this.fontScale = 8.0F;
         this.amount -= reduceAmount;
         if (this.amount == 0)
-            addToTop((AbstractGameAction)new RemoveSpecificPowerAction(this.owner, this.owner, FriendshipPower.POWER_ID));
+            addToTop((AbstractGameAction)new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
         if (this.amount >= 999)
             this.amount = 999;
         if (this.amount <= -999)

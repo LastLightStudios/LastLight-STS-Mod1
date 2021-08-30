@@ -23,5 +23,13 @@
       "friendship"
     ],
     "DESCRIPTION": "This is how much Friendship you currently have."
+  },
+  {
+    "PROPER_NAME": "Wither",
+    "NAMES": [
+      "wither",
+      "withers"
+    ],
+    "DESCRIPTION": "When applied, add a stack of existing: #yPoison, #yVulnerable, #yWeak, and #yFrail."
   }
 ]

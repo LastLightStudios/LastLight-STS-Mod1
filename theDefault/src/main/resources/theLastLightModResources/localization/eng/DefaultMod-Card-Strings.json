@@ -49,5 +49,17 @@
   "theLastLightMod:OrbSkill": {
     "NAME": "Get Orb",
     "DESCRIPTION": "Channel 1 Default Orb."
+  },
+  "theLastLightMod:PoisonStrike": {
+    "NAME": "Poison Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak and !theLastLightMod:SecondMagic! Poison to an enemy."
+  },
+  "theLastLightMod:WitheringStrike": {
+    "NAME": "Withering Strike",
+    "DESCRIPTION": "Deal !D! damage and apply !M! Weak and !theLastLightMod:SecondMagic! Wither to an enemy."
+  },
+  "theLastLightMod:WitheringGlare": {
+    "NAME": "Withering Glare",
+    "DESCRIPTION": "Apply !M! Weak and then !theLastLightMod:SecondMagic! Wither to an enemy."
   }
 }
