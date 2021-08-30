@@ -28,8 +28,9 @@
     "PROPER_NAME": "Wither",
     "NAMES": [
       "wither",
-      "withers"
+      "withers",
+      "withered"
     ],
-    "DESCRIPTION": "When applied, add a stack of existing: #yPoison, #yVulnerable, #yWeak, and #yFrail."
+    "DESCRIPTION": "Withered creatures suffer from Debuffs longer. While Withered, the following Debuffs do not decrease: Poison, Vulnerable, and Weak."
   }
 ]

@@ -19,7 +19,13 @@
                 "NAME": "Friendship",
                 "DESCRIPTIONS": [
                         "You have #b",
-                        " #yFriendship."
+                        " thelastlightmod:Friendship."
+                ]
+        },
+        "theLastLightMod:WitherPower": {
+                "NAME": "Wither",
+                "DESCRIPTIONS": [
+                        "While thelastlightmod:Wither is applied, Weak, Vulnerable, and Poison will not decrease."
                 ]
         }
 }

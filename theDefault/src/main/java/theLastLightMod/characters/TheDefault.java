@@ -171,6 +171,7 @@ public class TheDefault extends CustomPlayer {
         // retVal.add(OrbSkill.ID);
         retVal.add(PoisonStrike.ID);
         retVal.add(WitheringStrike.ID);
+        retVal.add(WitheringGlare.ID);
         return retVal;
     }
 
