@@ -3,9 +3,11 @@ package theLastLightMod.powers;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -18,9 +20,9 @@ import theLastLightMod.util.TextureLoader;
 
 import static theLastLightMod.DefaultMod.makePowerPath;
 
-public class WitherPower extends AbstractPower {
+public class DeathTouchedPower extends AbstractPower {
 
-    public static final String POWER_ID = DefaultMod.makeID("WitherPower");
+    public static final String POWER_ID = DefaultMod.makeID("DeathTouchedPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
@@ -32,63 +34,32 @@ public class WitherPower extends AbstractPower {
 
     private boolean justApplied = false;
 
-    public WitherPower(final AbstractCreature owner, int amount, boolean isSourceMonster) {
+    public DeathTouchedPower(final AbstractCreature owner, int newAmount) {
         name = NAME;
         ID = POWER_ID;
 
         this.owner = owner;
-        this.amount = amount;
-        if (this.amount >= 9999)
-            this.amount = 9999;
+        this.amount = newAmount;
 
         updateDescription();
         // We load those textures here.
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
         this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
-
-        if (isSourceMonster) {
-            this.justApplied = true;
-        }
-        type = PowerType.DEBUFF;
-        this.isTurnBased = true;
-
+        type = PowerType.BUFF;
     }
 
     @Override
     public void updateDescription() {
-        if (this.amount > 0) {
-            this.description = DESCRIPTIONS[0];
-        }
+        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
 
     @Override
-    public void atStartOfTurn(){
-        if((AbstractDungeon.getCurrRoom().phase) == AbstractRoom.RoomPhase.COMBAT &&
-        !AbstractDungeon.getMonsters().areMonstersBasicallyDead()){
-            if(AbstractDungeon.player.hasPower(CorrosionPower.POWER_ID)){
-                for (int i = 0; i < (AbstractDungeon.player.getPower(CorrosionPower.POWER_ID)).amount; i++){
-                    addToBot(new TriggerWitherDamageAction(this.owner));
-                }
-            }
+    public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target){
+        if (damageAmount > 0 && target != this.owner && info.type == DamageInfo.DamageType.NORMAL){
+            flash();
+            addToTop(
+                    new ApplyPowerAction(target, this.owner,
+                            new WitherPower(target, this.amount, false), this.amount, true));
         }
-    }
-
-    public void triggerWitherDamage(){
-        flashWithoutSound();
-        addToBot(new LoseHPAction(this.owner, AbstractDungeon.player, this.amount, AbstractGameAction.AttackEffect.FIRE));
-    }
-
-    @Override
-    public void atEndOfRound(){
-        if (this.justApplied) {
-            this.justApplied = false;
-            return;
-        }
-        if (this.amount == 0) {
-            addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
-        } else {
-            addToBot(new ReducePowerAction(this.owner, this.owner, this.ID, 1));
-        }
-
     }
 }

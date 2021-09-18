@@ -54,12 +54,49 @@
     "NAME": "Poison Strike",
     "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak and !theLastLightMod:SecondMagic! Poison to an enemy."
   },
-  "theLastLightMod:WitheringStrike": {
+  "theLastLightMod:WitheringStrikeGreen": {
     "NAME": "Withering Strike",
-    "DESCRIPTION": "Deal !D! damage and apply !M! Weak and !theLastLightMod:SecondMagic! thelastlightmod:Wither to an enemy."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Weak and !theLastLightMod:SecondMagic! thelastlightmod:Wither."
   },
-  "theLastLightMod:WitheringGlare": {
+  "theLastLightMod:WitheringGlareGreen": {
     "NAME": "Withering Glare",
-    "DESCRIPTION": "Apply !M! Weak and !theLastLightMod:SecondMagic! thelastlightmod:Wither to an enemy."
+    "DESCRIPTION": "Apply !M! Poison and !theLastLightMod:SecondMagic! thelastlightmod:Wither."
+  },
+  "theLastLightMod:SappingWinds": {
+    "NAME": "SappingWinds",
+    "DESCRIPTION": "At the start of your turn, apply !M! thelastlightmod:Wither to ALL enemies."
+  },
+  "theLastLightMod:Drain": {
+    "NAME": "Drain",
+    "DESCRIPTION": "Deal damage equal to enemy's thelastlightmod:Wither, then heal for damage dealt. NL Exhaust. NL ",
+    "EXTENDED_DESCRIPTION": ["(Deals !D! damage.)"]
+  },
+  "theLastLightMod:CreepingDread": {
+    "NAME": "Creeping Dread",
+    "DESCRIPTION": "Apply !M! Weak and !theLastLightMod:SecondMagic! thelastlightmod:Wither to ALL enemies. NL Exhaust."
+  },
+  "theLastLightMod:DecayingPunch": {
+    "NAME": "Decaying Punch",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable. NL Apply !theLastLightMod:SecondMagic! thelastlightmod:Wither."
+  },
+  "theLastLightMod:Corrosion": {
+    "NAME": "Corrosion",
+    "DESCRIPTION": "At the start of their turn, enemies lose HP equal to their thelastlightmod:Wither stacks."
+  },
+  "theLastLightMod:Atrophy": {
+    "NAME": "Atrophy",
+    "DESCRIPTION": "Apply !M! thelastlightmod:Wither. NL ALL enemies lose HP equal to their thelastlightmod:Wither stacks."
+  },
+  "theLastLightMod:CursedBlades": {
+    "NAME": "Cursed Blades",
+    "DESCRIPTION": "Add !M! Shivs into your hand. NL Apply !theLastLightMod:SecondMagic! thelastlightmod:Wither to ALL enemies."
+  },
+  "theLastLightMod:DeathTouched": {
+    "NAME": "Death Touched",
+    "DESCRIPTION": "Whenever an Attack deals unblocked damage, apply !M! thelastlightmod:Wither."
+  },
+  "theLastLightMod:Remnants": {
+    "NAME": "Remnants",
+    "DESCRIPTION": "Gain !B! Block. NL Apply !M! Weak and thelastlightmod:Wither. NL Discard 1 Card."
   }
 }

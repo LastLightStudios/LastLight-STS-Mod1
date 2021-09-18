@@ -19,13 +19,35 @@
                 "NAME": "Friendship",
                 "DESCRIPTIONS": [
                         "You have #b",
-                        " thelastlightmod:Friendship."
+                        " #yFriendship."
                 ]
         },
         "theLastLightMod:WitherPower": {
                 "NAME": "Wither",
                 "DESCRIPTIONS": [
-                        "While thelastlightmod:Wither is applied, Weak, Vulnerable, and Poison will not decrease."
+                        "While #yWither is applied, Weak, Vulnerable, and Poison will not decrease."
+                ]
+        },
+        "theLastLightMod:SappingWindsPower": {
+                "NAME": "Sapping Winds",
+                "DESCRIPTIONS": [
+                        "At the start of your turn, apply #b",
+                        " #yWither to all enemies."
+                ]
+        },
+        "theLastLightMod:CorrosionPower": {
+                "NAME": "Corrosion",
+                "DESCRIPTIONS": [
+                        "At the start of their turn, enemies lose HP equal to their #yWither stacks",
+                        ".",
+                        " times."
+                ]
+        },
+        "theLastLightMod:DeathTouchedPower": {
+                "NAME": "Death Touched",
+                "DESCRIPTIONS": [
+                        "Whenever an Attack deals unblocked damage, apply ",
+                        " #yWither"
                 ]
         }
 }
