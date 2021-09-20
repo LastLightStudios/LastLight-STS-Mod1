@@ -68,8 +68,8 @@
   },
   "theLastLightMod:Siphon": {
     "NAME": "Siphon",
-    "DESCRIPTION": "Steal health equal to enemy's thelastlightmod:Wither, this removes the enemy's thelastlightmod:Wither stacks. NL ",
-    "EXTENDED_DESCRIPTION": ["Exhaust."]
+    "DESCRIPTION": "Steal health equal to enemy's thelastlightmod:Wither, this removes the enemy's thelastlightmod:Wither stacks. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Steal health equal to enemy's thelastlightmod:Wither, this removes the enemy's thelastlightmod:Wither stacks."
   },
   "theLastLightMod:CreepingDread": {
     "NAME": "Creeping Dread",
