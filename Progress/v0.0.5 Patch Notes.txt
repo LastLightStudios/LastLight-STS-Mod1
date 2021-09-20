@@ -1,0 +1,72 @@
+
+v0.0.5Steam Description:
+v0.0.5 (WIP)
+
+This is a Silent Mod, adding new cards centered around a new mechanic, Wither:
+
+
+Wither:
+"While Wither is applied, Weak, Vulnerable, and Poison will not decrease."
+
+Cards:
+Withering Strike (Common)
+Cost:1
+Desc: Deal 6(8) damage. Apply 1 Weak and 2(4) Wither
+
+Atrophy (Common)
+Cost: 1
+Desc: Apply 5(8) Wither. ALL enemies lose HP equal to their Wither stacks.
+
+Remnants: (Common)
+Cost: 1
+Desc:  Gain 5(8) Block. Apply 1 Weak and 2(3) Wither. Discard 1 Card
+
+Sapping Winds (Uncommon)
+Cost: 1
+Desc: At the start of your turn, apply 2(3) Wither to ALL enemies.
+
+Decaying Punch (Uncommon)
+Cost: 2
+Desc: Deal 13 damage. Apply 1(2) Vulnerable. Apply 1(3) Wither.
+
+Cursed Blades (Uncommon)
+Cost: 1
+Desc: Add 2(3) Shivs into your hand. This turn, your Attacks apply 1(2) Wither.
+
+Corrosion (Rare)
+Cost: 1(0)
+Desc: At the start of their turn, enemies lose HP equal to their Wither stacks
+
+Siphon (Rare)
+Cost: 1
+Desc: Steal health equal to enemy's Wither, this removes the enemy's Wither stacks. Exhaust. (Exhaust removed on upgrade)
+
+
+v0.0.5 (WIP) Patch Notes:
+Removed:
+Withering Glare - Poison doesn’t actually need any additional support. Wither can supplement a poison deck perfectly fine and this card turns Wither decks into Poison decks.
+Creeping Dread - Feels a bit like a worse Crippling Cloud? Since Wither doesn’t inherently do anything, it’s just a AoE Weak. I may revisit this, but it doesn’t feel great at the moment. As a Rare it could have more power and feel more interesting.
+
+Rework:
+Drain->Siphon:
+Drain sat in a weird spot where it could act as a free full Heal in some bossfights while also being a Bite that exhausts in hallway fights. The healing was also affected by vulnerable and strength, which didn’t match the identity I wanted. Reaper being affected by those things makes sense in Ironclad, but not as much in Silent.
+
+Drain (Rare):
+Cost: 1
+Desc: Steal health equal to enemy's Wither, this removes the enemy's Wither stacks. Exhaust (Exhaust removed on upgrade)
+
+It will still have variable power, but now it feels more like a finisher. It may need adjustment, but for now I’m happy with it.
+Cursed Blades - This card feels good as Shiv support, but applying AoE Wither felt a little out of place. The new effect should feel more in line with Shiv builds.
+
+OLD: Add 2(3) Shivs into your hand. Apply 2(3) Wither to ALL enemies.
+To
+NEW: Add 2(3) Shivs into your hand. This turn, your Attacks apply 1(2) Wither.
+
+Atrophy - The identity of the card feels really good, but the power seems lower than expected. I’m directly buffing the numbers from 4(7) to 5(8). Additionally, I am giving Remnants a bit more Wither power.
+
+Remnants
+
+OLD: Gain 5(8) Block. Apply 1(2) Wither and Weak. Discard 1 Card
+NEW: Gain 5(8) Block. Apply 1 Weak and 2(3) Wither. Discard 1 Card
+
+The description has also been modified to make the effects and order of the effects more clear (the order matters when the enemy has Artifacts).
