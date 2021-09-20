@@ -25,6 +25,10 @@ Sapping Winds (Uncommon)
 Cost: 1
 Desc: At the start of your turn, apply 2(3) Wither to ALL enemies.
 
+Creeping Dread (Uncommon)
+Cost: 2
+Desc: Apply 2(3) Weak and 3(5) Wither to ALL enemies. Exhaust.
+
 Decaying Punch (Uncommon)
 Cost: 2
 Desc: Deal 13 damage. Apply 1(2) Vulnerable. Apply 1(3) Wither.
@@ -45,8 +49,6 @@ Desc: Steal health equal to enemy's Wither, this removes the enemy's Wither stac
 v0.0.5 (WIP) Patch Notes:
 Removed:
 Withering Glare - Poison doesn’t actually need any additional support. Wither can supplement a poison deck perfectly fine and this card turns Wither decks into Poison decks.
-Creeping Dread - Feels a bit like a worse Crippling Cloud? Since Wither doesn’t inherently do anything, it’s just a AoE Weak. I may revisit this, but it doesn’t feel great at the moment. As a Rare it could have more power and feel more interesting.
-
 Rework:
 Drain->Siphon:
 Drain sat in a weird spot where it could act as a free full Heal in some bossfights while also being a Bite that exhausts in hallway fights. The healing was also affected by vulnerable and strength, which didn’t match the identity I wanted. Reaper being affected by those things makes sense in Ironclad, but not as much in Silent.
@@ -70,3 +72,8 @@ OLD: Gain 5(8) Block. Apply 1(2) Wither and Weak. Discard 1 Card
 NEW: Gain 5(8) Block. Apply 1 Weak and 2(3) Wither. Discard 1 Card
 
 The description has also been modified to make the effects and order of the effects more clear (the order matters when the enemy has Artifacts).
+
+Keeping an eye on :
+
+Creeping Dread - Feels a bit like a worse Crippling Cloud? Since Wither doesn’t inherently do anything, it’s just a AoE Weak. I may revisit this, but it doesn’t feel great at the moment. As a Rare it could have more power and feel more interesting.
+
