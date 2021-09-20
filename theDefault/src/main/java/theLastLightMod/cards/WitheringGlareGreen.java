@@ -1,5 +1,6 @@
 package theLastLightMod.cards;
 
+import basemod.AutoAdd;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -12,6 +13,7 @@ import theLastLightMod.powers.WitherPower;
 
 import static theLastLightMod.DefaultMod.makeCardPath;
 
+@AutoAdd.Ignore
 public class WitheringGlareGreen extends AbstractDynamicCard{
 
     // TEXT DECLARATION

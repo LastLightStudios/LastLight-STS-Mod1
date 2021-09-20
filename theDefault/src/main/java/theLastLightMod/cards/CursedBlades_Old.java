@@ -9,16 +9,15 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theLastLightMod.DefaultMod;
-import theLastLightMod.powers.CursedBladesPower;
 import theLastLightMod.powers.WitherPower;
 
 import static theLastLightMod.DefaultMod.makeCardPath;
 
-public class CursedBlades extends AbstractDynamicCard{
+public class CursedBlades_Old extends AbstractDynamicCard{
 
     // TEXT DECLARATION
 
-    public static final String ID = DefaultMod.makeID(CursedBlades.class.getSimpleName());
+    public static final String ID = DefaultMod.makeID(CursedBlades_Old.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     public static final String IMG = makeCardPath("Attack.png");
@@ -35,17 +34,13 @@ public class CursedBlades extends AbstractDynamicCard{
     private static final int SHIVS = 2;
     private static final int UPGRADE_PLUS_SHIVS = 1;
 
-    // used to apply Wither to all enemies
     private static final int WITHER = 2;
     private static final int UPGRADE_PLUS_WITHER = 1;
 
-    private static final int WITHER_ON_HIT = 1;
-    private static final int UPGRADE_PLUS_WITHER_ON_HIT = 1;
-
-    public CursedBlades() {
+    public CursedBlades_Old() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         magicNumber = baseMagicNumber = SHIVS;
-        defaultSecondMagicNumber = defaultBaseSecondMagicNumber = WITHER_ON_HIT;
+        defaultSecondMagicNumber = defaultBaseSecondMagicNumber = WITHER;
     }
 
     // Actions the card should do.
@@ -54,10 +49,14 @@ public class CursedBlades extends AbstractDynamicCard{
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()){
             flash();
             addToBot(new MakeTempCardInHandAction(new Shiv(), this.magicNumber));
+            for (AbstractMonster monster: (AbstractDungeon.getMonsters().monsters)){
+                if (!monster.isDead && !monster.isDying){
+                    addToBot(
+                            new ApplyPowerAction(monster, p,
+                                    new WitherPower(monster, this.defaultSecondMagicNumber, false), this.defaultSecondMagicNumber));
+                }
+            }
         }
-        addToBot(
-                new ApplyPowerAction(p, p,
-                        new CursedBladesPower(p, this.defaultSecondMagicNumber), this.defaultBaseSecondMagicNumber));
     }
 
     // Upgraded stats.
@@ -66,7 +65,7 @@ public class CursedBlades extends AbstractDynamicCard{
         if (!upgraded) {
             upgradeName();
             upgradeMagicNumber(UPGRADE_PLUS_SHIVS);
-            upgradeDefaultSecondMagicNumber(UPGRADE_PLUS_WITHER_ON_HIT);
+            upgradeDefaultSecondMagicNumber(UPGRADE_PLUS_WITHER);
         }
     }
 }

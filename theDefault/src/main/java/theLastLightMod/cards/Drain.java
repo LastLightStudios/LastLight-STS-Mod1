@@ -1,5 +1,6 @@
 package theLastLightMod.cards;
 
+import basemod.AutoAdd;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
@@ -13,6 +14,7 @@ import theLastLightMod.powers.WitherPower;
 
 import static theLastLightMod.DefaultMod.makeCardPath;
 
+@AutoAdd.Ignore
 public class Drain extends AbstractDynamicCard {
 
     // TEXT DECLARATION

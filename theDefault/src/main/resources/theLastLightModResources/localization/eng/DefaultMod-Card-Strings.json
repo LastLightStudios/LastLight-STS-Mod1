@@ -89,11 +89,7 @@
   },
   "theLastLightMod:CursedBlades": {
     "NAME": "Cursed Blades",
-    "DESCRIPTION": "Add !M! Shivs into your hand. NL Apply !theLastLightMod:SecondMagic! thelastlightmod:Wither to ALL enemies."
-  },
-  "theLastLightMod:DeathTouched": {
-    "NAME": "Death Touched",
-    "DESCRIPTION": "Whenever an Attack deals unblocked damage, apply !M! thelastlightmod:Wither."
+    "DESCRIPTION": "Add !M! Shivs into your hand. NL This turn, apply !theLastLightMod:SecondMagic! thelastlightmod:Wither whenever you attack."
   },
   "theLastLightMod:Remnants": {
     "NAME": "Remnants",

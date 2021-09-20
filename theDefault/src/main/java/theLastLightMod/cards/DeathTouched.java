@@ -1,5 +1,6 @@
 package theLastLightMod.cards;
 
+import basemod.AutoAdd;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -10,6 +11,7 @@ import theLastLightMod.powers.DeathTouchedPower;
 
 import static theLastLightMod.DefaultMod.makeCardPath;
 
+@AutoAdd.Ignore
 public class DeathTouched extends AbstractDynamicCard{
 
     // TEXT DECLARATION

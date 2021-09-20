@@ -43,10 +43,10 @@
                         " times."
                 ]
         },
-        "theLastLightMod:DeathTouchedPower": {
-                "NAME": "Death Touched",
+        "theLastLightMod:CursedBladesPower": {
+                "NAME": "Cursed Blades",
                 "DESCRIPTIONS": [
-                        "Whenever an Attack deals unblocked damage, apply ",
+                        "Whenever you attack Attack this turn, apply ",
                         " #yWither"
                 ]
         }
