@@ -66,7 +66,7 @@ public class Remnants extends AbstractDynamicCard{
         if (!upgraded) {
             upgradeName();
             upgradeBlock(UPGRADE_PLUS_BLOCK);
-            upgradeMagicNumber(UPGRADE_PLUS_WEAK);
+            //upgradeMagicNumber(UPGRADE_PLUS_WEAK);
             upgradeDefaultSecondMagicNumber(UPGRADE_PLUS_WITHER);
         }
     }

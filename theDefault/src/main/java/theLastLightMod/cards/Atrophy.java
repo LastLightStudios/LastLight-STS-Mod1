@@ -31,7 +31,7 @@ public class Atrophy extends AbstractDynamicCard{
 
     private static final int COST = 1;
 
-    private static final int WITHER = 4;
+    private static final int WITHER = 5;
     private static final int UPGRADE_PLUS_WITHER = 3;
 
     public Atrophy() {
