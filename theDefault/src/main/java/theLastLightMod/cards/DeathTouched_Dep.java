@@ -12,11 +12,11 @@ import theLastLightMod.powers.DeathTouchedPower;
 import static theLastLightMod.DefaultMod.makeCardPath;
 
 @AutoAdd.Ignore
-public class DeathTouched extends AbstractDynamicCard{
+public class DeathTouched_Dep extends AbstractDynamicCard{
 
     // TEXT DECLARATION
 
-    public static final String ID = DefaultMod.makeID(DeathTouched.class.getSimpleName());
+    public static final String ID = DefaultMod.makeID(DeathTouched_Dep.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     public static final String IMG = makeCardPath("Attack.png");
@@ -33,7 +33,7 @@ public class DeathTouched extends AbstractDynamicCard{
     private static final int WITHER = 1;
     private static final int UPGRADE_PLUS_WITHER = 0;
 
-    public DeathTouched() {
+    public DeathTouched_Dep() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         this.baseMagicNumber = WITHER;
         this.magicNumber = this.baseMagicNumber;

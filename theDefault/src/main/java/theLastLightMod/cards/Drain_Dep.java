@@ -15,11 +15,11 @@ import theLastLightMod.powers.WitherPower;
 import static theLastLightMod.DefaultMod.makeCardPath;
 
 @AutoAdd.Ignore
-public class Drain extends AbstractDynamicCard {
+public class Drain_Dep extends AbstractDynamicCard {
 
     // TEXT DECLARATION
 
-    public static final String ID = DefaultMod.makeID(Drain.class.getSimpleName());
+    public static final String ID = DefaultMod.makeID(Drain_Dep.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     public static final String IMG = makeCardPath("Attack.png");
@@ -35,7 +35,7 @@ public class Drain extends AbstractDynamicCard {
     private static final int UPGRADED_COST = 0;
     private static final int DAMAGE = 0;
 
-    public Drain() {
+    public Drain_Dep() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         baseDamage = DAMAGE;
         this.exhaust = true;

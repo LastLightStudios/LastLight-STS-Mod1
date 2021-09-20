@@ -34,12 +34,10 @@ public class Remnants extends AbstractDynamicCard{
     private static final int BLOCK = 5;
     private static final int UPGRADE_PLUS_BLOCK = 3;
 
-    // DESCRIPTION currently is only grabbing the first magic number as in "Apply !M! Wither and Weak"
-
     private static final int WEAK = 1;
     private static final int UPGRADE_PLUS_WEAK = 1;
 
-    private static final int WITHER = 1;
+    private static final int WITHER = 2;
     private static final int UPGRADE_PLUS_WITHER = 1;
 
     public Remnants() {

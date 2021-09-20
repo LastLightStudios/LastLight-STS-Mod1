@@ -66,10 +66,10 @@
     "NAME": "SappingWinds",
     "DESCRIPTION": "At the start of your turn, apply !M! thelastlightmod:Wither to ALL enemies."
   },
-  "theLastLightMod:Drain": {
-    "NAME": "Drain",
-    "DESCRIPTION": "Deal damage equal to enemy's thelastlightmod:Wither, then heal for damage dealt. NL Exhaust. NL ",
-    "EXTENDED_DESCRIPTION": ["(Deals !D! damage.)"]
+  "theLastLightMod:Siphon": {
+    "NAME": "Siphon",
+    "DESCRIPTION": "Steal health equal to enemy's thelastlightmod:Wither, this removes the enemy's thelastlightmod:Wither stacks. NL ",
+    "EXTENDED_DESCRIPTION": ["Exhaust."]
   },
   "theLastLightMod:CreepingDread": {
     "NAME": "Creeping Dread",
@@ -93,6 +93,6 @@
   },
   "theLastLightMod:Remnants": {
     "NAME": "Remnants",
-    "DESCRIPTION": "Gain !B! Block. NL Apply !M! Weak and thelastlightmod:Wither. NL Discard 1 Card."
+    "DESCRIPTION": "Gain !B! Block. NL Apply !M! Weak and !theLastLightMod:SecondMagic! thelastlightmod:Wither. NL Discard 1 Card."
   }
 }

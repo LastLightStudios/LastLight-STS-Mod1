@@ -1,5 +1,6 @@
 package theLastLightMod.cards;
 
+import basemod.AutoAdd;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.tempCards.Shiv;
@@ -13,11 +14,12 @@ import theLastLightMod.powers.WitherPower;
 
 import static theLastLightMod.DefaultMod.makeCardPath;
 
-public class CursedBlades_Old extends AbstractDynamicCard{
+@AutoAdd.Ignore
+public class CursedBlades_Dep extends AbstractDynamicCard{
 
     // TEXT DECLARATION
 
-    public static final String ID = DefaultMod.makeID(CursedBlades_Old.class.getSimpleName());
+    public static final String ID = DefaultMod.makeID(CursedBlades_Dep.class.getSimpleName());
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
     public static final String IMG = makeCardPath("Attack.png");
@@ -37,7 +39,7 @@ public class CursedBlades_Old extends AbstractDynamicCard{
     private static final int WITHER = 2;
     private static final int UPGRADE_PLUS_WITHER = 1;
 
-    public CursedBlades_Old() {
+    public CursedBlades_Dep() {
         super(ID, IMG, COST, TYPE, COLOR, RARITY, TARGET);
         magicNumber = baseMagicNumber = SHIVS;
         defaultSecondMagicNumber = defaultBaseSecondMagicNumber = WITHER;
