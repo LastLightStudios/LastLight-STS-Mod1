@@ -17,7 +17,7 @@ This mod has one central mechanic:
 
 These are all cards for The Silent. I am looking at starting to work on The Ironclad. Thsi doesn't mean I think The Silent is done. This is still WIP so feedback is greatly appreciated.
 
-Cards:
+## Cards:
 Withering Strike (Common)
 Cost:1
 Desc: Deal 6(8) damage. Apply 1 Weak and 2(4) Wither
