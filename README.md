@@ -22,17 +22,13 @@ Withering Strike (Common)
 Cost:1
 Desc: Deal 6(8) damage. Apply 1 Weak and 2(4) Wither
 
-Withering Glare (Common)
-Cost: 1
-Desc: Apply 3(5) Poison and 3(5) Wither.
-
 Atrophy (Common)
 Cost: 1
-Desc: Apply 4(7) Wither. ALL enemies lose HP equal to their Wither stacks.
+Desc: Apply 5(8) Wither. ALL enemies lose HP equal to their Wither stacks.
 
 Remnants: (Common)
 Cost: 1
-Desc: Gain 5(8) Block. Apply 1(2) Wither and Weak.
+Desc: Gain 5(8) Block. Apply 1 Weak and 2(3) Wither. Discard 1 Card
 
 Sapping Winds (Uncommon)
 Cost: 1
@@ -48,18 +44,13 @@ Desc: Deal 13 damage. Apply 1(2) Vulnerable. Apply 1(3) Wither.
 
 Cursed Blades (Uncommon)
 Cost: 1
-Desc: Add 2(3) Shivs into your hand. Apply 2(3) Wither to ALL enemies.
-
-Death Touched (Uncommon)
-Cost: 1
-Desc: "Whenever an Attack deals unblocked damage, apply 1 Wither."
-I uh forgot to add an upgrade for this..partially b/c I wasn't sure if it should be 2(1) or apply more Wither or something else.
+Desc: Add 2(3) Shivs into your hand. This turn, your Attacks apply 1(2) Wither.
 
 Corrosion (Rare)
 Cost: 1(0)
 Desc: At the start of their turn, enemies lose HP equal to their Wither stacks
 
-Drain (Rare)
-Cost: 1(0)
-Desc: Deal damage equal to enemy's Wither, then heal for damage dealt. Exhaust.
+Siphon (Rare)
+Cost: 1
+Desc: Steal health equal to enemy's Wither, this removes the enemy's Wither stacks. Exhaust. (Exhaust removed on upgrade)
 
